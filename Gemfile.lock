@@ -1,18 +1,19 @@
 PATH
   remote: .
   specs:
-    rails-mcp (0.1.2)
-      rack (>= 2.2)
+    rails-mcp (0.1.4)
+      rack (>= 2.2, < 3.1)
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.6.2)
-    rack (3.2.3)
+    rack (3.0.18)
     rack-test (2.2.0)
       rack (>= 1.3)
-    rackup (2.2.1)
+    rackup (2.1.0)
       rack (>= 3)
+      webrick (~> 1.8)
     rspec (3.13.2)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -22,14 +23,13 @@ GEM
     rspec-expectations (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-mocks (3.13.6)
+    rspec-mocks (3.13.8)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-support (3.13.6)
-    webrick (1.9.1)
+    rspec-support (3.13.7)
+    webrick (1.9.2)
 
 PLATFORMS
-  arm64-darwin-23
   ruby
 
 DEPENDENCIES
@@ -40,4 +40,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   2.5.9
+   1.17.3

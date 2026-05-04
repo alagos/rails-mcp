@@ -13,12 +13,12 @@ Gem::Specification.new do |s|
   s.files = Dir["lib/**/*", "LICENSE", "README.md"]
   s.require_paths = ["lib"]
 
-  s.required_ruby_version = ">= 2.7.0"
+  s.required_ruby_version = ">= 2.4.0"
 
-  s.add_dependency "rack", ">= 2.2"
+  # Rack 3.2 has compatibility issues with rackup->webrick (as long this is compatible with ruby 2.4)
+  s.add_dependency "rack", ">= 2.2", "< 3.1"
   s.add_development_dependency "rack-test"
   s.add_development_dependency "rspec", "~> 3.0"
   s.add_development_dependency "rackup"
   s.add_development_dependency "webrick"
 end
-

@@ -143,9 +143,11 @@ RSpec.describe RailsMcp::MCP::Server do
 
     around do |example|
       original = ENV["RAILS_MCP_TOKEN"]
-      example.run
-    ensure
-      ENV["RAILS_MCP_TOKEN"] = original
+      begin
+        example.run
+      ensure
+        ENV["RAILS_MCP_TOKEN"] = original
+      end
     end
 
     context "when disabled (default)" do
